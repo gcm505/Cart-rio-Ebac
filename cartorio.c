@@ -125,15 +125,6 @@ int deletar () //funcao de deletar usuarios cadastrados
 	
 }
 
-
-
-
-
-
-
-
-
-
 int main ()
 {
 	//inicio das variaveis
@@ -153,13 +144,14 @@ int main ()
 	
 	printf("=====Cartório da EBAC===== \n\n" ); //menu
 	printf("escolha a opção desejada:\n\n");
-	printf("\t1 Registrar nomes\n");
-	printf("\t2 Consultar Nomes\n");
-	printf("\t3 Deletar nomes\n\n");
+	printf("\t1 - Registrar nomes\n");
+	printf("\t2 - Consultar Nomes\n");
+	printf("\t3 - Deletar nomes\n");
+	printf("\t4 - Sair\n\n");
 	printf("Opção: ");
 	
 	
-	scanf("%d", &opcao); //le a opcao escolhida
+	scanf("%d", &opcao); //ler a opcao escolhida pelo usuario
 	
 	system("cls");
 	
@@ -176,6 +168,11 @@ int main ()
 	 
 	 case 3:
 	 	deletar();	
+	 break;
+	 
+	 case 4:
+	 	printf("Obrigado por usar o sistema\n");
+	 	return 0;
 	 break;
 	 
 	 default:
