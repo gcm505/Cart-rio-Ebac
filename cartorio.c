@@ -130,63 +130,69 @@ int main ()
 	//inicio das variaveis
 	int opcao=0; 
 	int repeticao =1;
+	char senhadigitada[10]="a";
+	int comparacao;
 	//fim das variaveis
 	
+	printf("=====Cartório da EBAC===== \n\n");
+	printf("Login de administrador\n\nDigite a senha:\n");
+	scanf("%s",senhadigitada);
 	
+	comparacao = strcmp(senhadigitada, "admin"); // "strcmp" == Comparação de strings
 	
-	for(repeticao=1;repeticao=1;)
+	if (comparacao == 0) 
 	{
+		system("cls"); //limpa a tela
+		
+		for(repeticao=1;repeticao=1;)
+		{
 
 	
-	setlocale(LC_ALL, "Portuguese"); //define a linguagem
+			setlocale(LC_ALL, "Portuguese"); //define a linguagem
 	
-	system("cls"); //limpa a tela
+			system("cls");
 	
-	printf("=====Cartório da EBAC===== \n\n" ); //menu
-	printf("escolha a opção desejada:\n\n");
-	printf("\t1 - Registrar nomes\n");
-	printf("\t2 - Consultar Nomes\n");
-	printf("\t3 - Deletar nomes\n");
-	printf("\t4 - Sair\n\n");
-	printf("Opção: ");
-	
-	
-	scanf("%d", &opcao); //ler a opcao escolhida pelo usuario
-	
-	system("cls");
+			printf("=====Cartório da EBAC===== \n\n" ); //menu
+			printf("escolha a opção desejada:\n\n");
+			printf("\t1 - Registrar nomes\n");
+			printf("\t2 - Consultar Nomes\n");
+			printf("\t3 - Deletar nomes\n");
+			printf("\t4 - Sair\n\n");
+			printf("Opção: ");
 	
 	
-	switch(opcao) //chama as funcoes
-	 {
-	 case 1:
-	 	registro();
-	 break;
+			scanf("%d", &opcao); //ler a opcao escolhida pelo usuario
+	
+			system("cls");
+	
+	
+			switch(opcao) //chama as funcoes
+			{
+		 		case 1:
+			  		registro();
+				break;
 	 
-	 case 2:
-	 	consulta();
-	 break;
+ 				case 2:
+	 				consulta();
+	 			break;
 	 
-	 case 3:
-	 	deletar();	
-	 break;
+	 			case 3:
+	 				deletar();	
+	 			break;
 	 
-	 case 4:
-	 	printf("Obrigado por usar o sistema\n");
-	 	return 0;
-	 break;
+	 			case 4:
+	 				printf("Obrigado por usar o sistema\n");
+	 			return 0;
+	 			break;
 	 
-	 default:
-	 	printf("Esssa opção não existe\n");
-	 	system("pause");
-	 break;
-	}
+				default:
+	 				printf("Esssa opção não existe\n");
+	 				system("pause");
+	 			break;
+			}
 		}
-	
-	
-	
-	
-	
-	
-	
+ 	}
+ 	else
+ 		printf("Senha incorreta!!");
 	
 }
